@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3><p>[Lingering River]>>>: Hello, Mr. Johnson.</p>
+	<p>[Lingering River]>>>: I am 9763, known as Lingering River.</p>
+	<p>[Lingering River]>>>: Please allow me to present the following fields for your job posting:</p></h3>
+
+<!--probably gonna want to look into making the field names headers and the field values blank, just putting the examples above the input proper.-->
+
+<p>Run Title</p>
+
+<input type="text" id="name">
+
+<p>Run Time</p>
+
+<input type="text" id="timestring" value="YYYY-MM-DD HH:mm CODE">
+
+<p>Number of Players</p>
+
+<input type="text" id="players" value="A range is fine here.">
+
+<p>Run Duration</p>
+
+<input type="text" id="duration" value="A single integer, please. 4 or 5 are both safe bets">
+
+<p>Communication</p>
+
+<input type="text" id="comms" value="Roll20 and Skype">
+
+<p>Run Location</p>
+
+<input type="text" id="location" value="In-game location">
+
+<p>Run Theme</p>
+
+<input type="text" id="theme" value="Extraction, Datasteal, Wetwork, etc.">
+
+<p>Run Type</p>
+
+<input type="text" id="type" value="Pink Mohawk/Black Trenchcoat">
+
+<p>Prerequisites</p>
+
+<input type="text" id="pre" value="Patience, etc.">
+
+<p>Description</p>
+
+<input type="text" id="desc" value="The meat of the post">
+
+<p>Notes</p>
+
+<input type="text" id="notes" value="Any other notes can go here.">
+
+<!--%20 space, %0D return, %3A :, -->
+
+<h3><p>[Lingering River]>>>: Thank you for using the ShadowNET formatting tool!</p>
+	<p>[Lingering River]>>>: If you have any feedback for SysOp, please send /u/shadownetwork a message.</p>
+	<p>[Lingering River]>>>: To complete the process, please press the button below.</p>
+	<p>[Lingering River]>>>: Have a pleasant day!</p></h3>
+
+<button onclick="format()">Take me to ShadowNET</button>
+
+<script>
+function format() { 
+	var title = encodeURIComponent(document.getElementById("name").value);
+	var timestring = encodeURIComponent(document.getElementById("timestring").value);
+	var players = encodeURIComponent(document.getElementById("players").value);
+	var duration = encodeURIComponent(document.getElementById("duration").value);
+	var comms = encodeURIComponent(document.getElementById("comms").value);
+	var location = encodeURIComponent(document.getElementById("location").value);
+	var theme = encodeURIComponent(document.getElementById("theme").value);
+	var type = encodeURIComponent(document.getElementById("type").value);
+	var pre = encodeURIComponent(document.getElementById("pre").value);
+	var desc = encodeURIComponent(document.getElementById("desc").value);
+	var notes = encodeURIComponent(document.getElementById("notes").value);
+
+	window.location.href = "http://www.reddit.com/r/shadownet/submit?selftext=true&title=%3C"+title+"%3E%20"+timestring+"&text="+timestring+"%0D%0D%2D%2D%0D%0DPlayers%3A%20"+players+"%0D%0DDuration%3A%20"+duration+"%20hours%0D%0DCommunication%3A%20"+comms+"%0D%0DIn%2DGame%20Location%3A%20"+location+"%0D%0DGame%20Theme%3A%20"+theme+"%0D%0DGame%20Type%3A%20"+type+"%0D%0DPrerequisites%3A%20"+pre+"%0D%0D%2D&2D%0D%0D"+desc+"%0D%0D%2D&2D%0D%0D"+notes;
+}
+
+</script>
+
+</body>
+</html>
